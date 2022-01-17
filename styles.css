@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*
+{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 7px;
+}
+
+body
+{
+    background-color: #394053;
+    margin: 0;
+}
+
+h2
+{
+    text-decoration: underline #000000; 
+    text-decoration-style: solid;
+}
+
+h3
+{
+    font-size: 22px;
+    text-decoration: underline #2C5F1C;
+}
+
+li, a, button
+{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header
+{
+    width: 100%;
+    padding: 35px 10%;
+    background-color: #7CAE7A;
+    text-decoration: underline double #01110A;
+    margin: 0;
+}
+
+.title
+{
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.flexbox-container
+{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    border: #AEB7A4 3px solid;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #4E4A59;
+}
+
+.flexbox-item
+{
+    min-height: 1%;
+    max-height: 20%;
+    height: auto; 
+    width: auto; 
+    max-width: 340px; 
+    max-height: 340px;
+}
+
+.flex-item-1
+{
+    height: auto; 
+    width: auto; 
+    max-width: 340px; 
+    max-height: 340px;
+}
+
+.flex-item-2
+{
+    max-width: 70%;
+    margin-left: 1%;
+    background-color: #4E4A59;
+}
+
+.flex-item-3
+{
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #4E4A59;
+}
+
+.graphics-border
+{
+    border: #A8C9A6;
+    border-style:solid;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.quellenlinks
+{
+    text-decoration: none;
+    color: #2A4C7D;
+}
+
+#impressum
+{
+    text-align: center;
+}
+
+.quellen
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

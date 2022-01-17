@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>QR-Codes</title>
+</head>
+<body>
+    <header>
+        <div class="title">QR-Codes</div>
+    </header>
+    <h2>Einleitung:</h2>
+    <div class="flexbox-container">
+        <div class="flexbox-item flex-item-1">
+            <img src="bilder/bildqrcode.png" class="graphics-border" alt="hacker" width="100%" height="100%">
+        </div>
+        <div class="flexbox-item flex-item-2">
+            Der QR-Code (englisch Quick Response, „schnelle Antwort“, als Markenbegriff
+            „QR Code“) ist ein zweidimensionaler Code, der von der japanischen Firma
+            Denso Wave im Jahr 1994 entwickelt wurde. Aufgrund einer automatischen
+            Fehlerkorrektur ist dieses Verfahren sehr robust und daher weit verbreitet.
+            Weiterentwicklungen sind der Micro-QR-Code, der Secure-QR-Code (SQRC),
+            der iQR-Code und der Frame-QR-Code.
+        </div>
+    </div>
+
+    <h2>Geschichte:</h2>
+    <div class="flexbox-container">
+        
+        <div class="flexbox-item flex-item-3">
+            Der QR-Code wurde zur Markierung von Baugruppen und Komponenten für die
+            Logistik in der Automobilproduktion des Toyota-Konzerns entwickelt. Das den
+            QR-Code entwickelnde Unternehmen Denso kooperiert bereits seit seiner
+            Ausgliederung aus dem Konzern 1949 als Zulieferer unter anderem für
+            sämtliche elektrischen und elektronischen Baugruppen mit Toyota. Die
+            Entwicklung des 2D-Codes übernahm die Tochterfirma Denso Wave, die auch
+            Identifikationssysteme und Geräte zur mobilen Datenerfassung entwickelt.
+            Entwickelt wurde der QR-Code ab 1992[1] von Masahiro Hara und seinen
+            Teammitgliedern Takayuki Nagaya, Motoaki Watabe, Tadao Nojiri und Yuji
+            Uchiyama.
+            Masahiro Hara und sein Team gewannen 2014 den Publikumspreis des
+            Europäischen Erfinderpreises des Europäischen Patentamtes in der Kategorie
+            „Außereuropäische Staaten“.
+        </div>
+    </div>
+
+    <h2>Grundlagen & Aufbau:</h2>
+    <div class="flexbox-container">
+        <div class="flexbox-item flex-item-3">
+            Der QR-Code besteht aus einer quadratischen Matrix aus schwarzen und
+            weißen Quadraten, die die kodierten Daten binär darstellen. Eine spezielle
+            Markierung in drei der vier Ecken des Quadrats gibt die Orientierung vor. Die
+            Daten im QR-Code sind durch einen fehlerkorrigierenden Code erweitert.
+            Dadurch wird der Verlust von bis zu 30 % des Codes toleriert, d. h., er kann
+            auch dann noch dekodiert werden.
+            Im Code enthalten sind die Versionsinformation und das benutzte
+            Datenformat. Der Datenteil enthält die kodierten Daten und Informationen zur
+            Fehlerkorrektur. Zur Feldbegrenzung enthält der QR-Code in nur drei seiner
+            Ecken ein bestimmtes Muster. Über das fehlende Muster in der vierten Ecke
+            erkennt das Lesegerät die Orientierung. Mit zunehmender Größe des Codes
+            werden weitere Muster hin hinzugefügt, um die Ausrichtung des Codes besser
+            erkennbar zu machen. Zwischen den drei Hauptpositionsmarkierungen
+            befindet sich eine Linie aus einer Folge streng abwechselnder Bits, worüber
+            sich die Matrix definiert. Ein Bit direkt oberhalb der Format-Information, das
+            dark module, repräsentiert die dunkle Farbe des Codes. Wichtig ist ebenfalls
+            der weiße Rand, die sog. Ruhezone, um den Code so von anderen
+            Informationen zu trennen.
+        </div>
+    </div>
+
+    <h2>Generieren von Codes:</h2>
+    <div class="flexbox-container">
+        <div class="flexbox-item flex-item-3">
+            Um einen QR-Code zu generieren, braucht man:
+            <ul>
+                <li>den Text, der codiert werden soll</li>
+                <li>den gewünschten Grad der Fehlerkorrektur</li>
+            </ul>
+            Der grobe Ablauf ist dann:
+            <ol>
+                <li>Anhand der Länge des Textes und des Grades der Fehlerkorrektur 
+                    bestimmt man, wie groß der QR-Code sein muss.</li>
+                <li>Man beginnt mit einer weißen Fläche, auf der nach und nach alle 
+                    Elemente des QR-Codes dargestellt werden.</li>
+                <li>Die Erkennungsmuster, die nicht von dem Text abhängen, werden zuerst 
+                    auf die Fläche gebracht. Das sind die Positionsmuster, die 
+                    Ausrichtungsmuster und die Synchronisationslinien.
+                    </li>
+                <li>Aus dem Text wird eine Bitfolge generiert.
+                </li>
+                <li>Zu der Text-Bitfolge wird eine weitere Bitfolge für die Fehlerkorrektur 
+                    generiert.
+                    </li>
+                <li>Die Text-Bitfolge wird zusammen mit der Fehlerkorrektur-Bitfolge dort in 
+                    das Symbol gezeichnet, wo noch Platz ist. Das geschieht von rechts nach 
+                    links in Schlangenlinien.</li>
+                <li>Um zu erreichen, dass das Symbol ungefähr gleich viele schwarze und 
+                    weiße Pixel enthält und um Muster zu vermeiden, die das Einlesen 
+                    erschweren, werden nacheinander acht verschiedene Masken über das 
+                    Symbol gelegt. Die Maske, die das beste Ergebnis liefert, wird 
+                    beibehalten.</li>
+                <li>Zum Schluss wird die Kennnummer der verwendeten Maske in das 
+                    Symbol gezeichnet.</li>
+            </ol>
+        </div>
+    </div>
+
+    <br>
+    
+
+    <div id="impressum">
+        Jannis Krönung &copy
+    </div>
+</body>
+</html>
